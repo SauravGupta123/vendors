@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ClipLoader } from "react-spinners";
+import ShopCard from "./ShopCard";
 
 function Shops() {
     const [loading, setLoading] = useState(true);
@@ -41,11 +43,12 @@ function Shops() {
     }
 
     return (
-        <div>
+        <div className="container my-4 mx-auto">
+            <h2 className="text-4xl font-bold text-center">Neaby Shops in your Polygon</h2>
             {shops.map((data) => (
                 <div key={data._id} className='row mb-3'>
-                    <div className='fs-3 m-3 cat_name'>{data.CategoryName}</div>
-                </div>
+                    <ShopCard name={data.CategoryName} photo={data.photo} hex={data.hex} />
+                </div> 
             ))}
         </div>
     );
