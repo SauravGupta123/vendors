@@ -10,10 +10,13 @@ function App() {
 
   return (
     <>
-      <CartProvider>
-        <Homepage />
-      </CartProvider>
+      <div className="bg-gray-200">
 
+        <CartProvider>
+          <Homepage />
+        </CartProvider>
+
+      </div>
     </>
   )
 }

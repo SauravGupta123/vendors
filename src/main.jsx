@@ -18,52 +18,54 @@ import ShopDetails from './screens/ShopDetails/ShopDetails.jsx';
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <App/>,
+    path: '/',
+    element: <App />,
     // loader:rootLoader,
     // action:rootAction,
-    errorElement:<ErrorPage/>,
+    errorElement: <ErrorPage />,
     // children:[{
     //   path:'/contacts/:contactID',
     //   element: <Contact/>,
-      
+
     // }],
 
   },
 
   {
-    path:'/login',
-    element:<Login/>
+    path: '/login',
+    element: <Login />
 
   },
   {
-    path:'/signup',
-    element:<Signup/>
+    path: '/signup',
+    element: <Signup />
 
   },
   {
-    path:'/myOrders',
-    element:<MyOrders/>
+    path: '/myOrders',
+    element: <MyOrders />
   },
   {
     path: '/shops',
-    element: <Shops/>
+    element: <Shops />
   },
   {
-    path:'/shops/:id',
-    element:<ShopDetails/>
+    path: '/shops/:id',
+    element: <ShopDetails />
   }
 
- 
+
 ]);
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
- 
-     <RouterProvider router={router}/>
-    {/* <App /> */}
+    <div className="">
+
+      <RouterProvider router={router} />
+      {/* <App /> */}
+    </div>
 
   </React.StrictMode>,
 )

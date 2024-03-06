@@ -1,10 +1,11 @@
-.Carausal{
-  
-    object-fit:contain;
-
+.Carausal {
+  object-fit: contain;
 }
-.carousel-item{
-    width:100vw;
-    height:600px;
+.carousel-item {
+  width: 100vw;
+  height: 600px;
 }
 
+html {
+  background-color: rgb(34, 34, 34) !important;
+}
