@@ -12,9 +12,10 @@ function App() {
     <>
       <div className="bg-gray-200">
 
-        <CartProvider>
+     
           <Homepage />
-        </CartProvider>
+          
+
 
       </div>
     </>

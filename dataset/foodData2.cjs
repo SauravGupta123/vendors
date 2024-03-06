@@ -121,7 +121,7 @@ const data = [
     },
     {
         "CategoryName": "Gupta Store",
-        "name": "Chicken Cheese Gupta Store",
+        "name": "Chicken Cheese pizza",
         "img": "https://media.istockphoto.com/photos/double-topping-Gupta Store-on-the-wooden-desk-isolated-picture-id1074109872?k=20&m=1074109872&s=612x612&w=0&h=JoYwwTfU_mMBykXpRB_DmgeecfotutOIO9pV5_JObpk=",
         "options": [
             {
@@ -134,7 +134,7 @@ const data = [
     },
     {
         "CategoryName": "Gupta Store",
-        "name": "Mix Veg Gupta Store",
+        "name": "Mix Veg Pizza",
         "img": "https://media.istockphoto.com/photos/chinese-food-veg-Gupta Store-picture-id1341905237?k=20&m=1341905237&s=612x612&w=0&h=Lbuza1Ig5cC1PwQhqTsq-Uac8hg1W-V0Wx4d4lqDeB0=",
         "options": [
             {

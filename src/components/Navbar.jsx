@@ -9,6 +9,7 @@ import { useCart } from './contextReducer';
 function Navbar() {
   const navigate=useNavigate();
   const data= useCart();
+  console.log("data", data)
   const[cartView,setCartView]=useState(false);
  const handleLogout=()=>{
     localStorage.removeItem('authToken');

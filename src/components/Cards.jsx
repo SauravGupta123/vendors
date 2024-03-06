@@ -3,8 +3,10 @@ import { useCart, useDispatchCart } from './contextReducer';
 import './cards.css'
 
 function Cards({ foodItem, options }) {
+    
     const priceOptions = Object.keys(options);
-    const data = useCart()
+    const data = useCart();
+    console.log(data);
     const priceRef = useRef();
     let dispatch = useDispatchCart();
     const img = foodItem.img;
@@ -18,6 +20,7 @@ function Cards({ foodItem, options }) {
 
     const handleAddToCart = async () => {
         let food = data.find((item) => item.id === foodItem._id);
+        console.log("data", data);
     
         if (food) {
             if (food.size !== size) {
