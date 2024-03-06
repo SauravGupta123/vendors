@@ -11,11 +11,12 @@ const MapComponent = () => {
     zoom: 8,
   })
   const [newplace, setNewplace] = useState({ lat: null, long: null })
-  function handleClick(e) {
-    const long = e.lngLat.lng;
-    const lat = e.lngLat.lat;
-    setNewplace({ lat, long })
-  }
+    function handleClick(e) {
+      const long = e.lngLat.lng;
+      const lat = e.lngLat.lat;
+      console.log(long, lat);
+      setNewplace({ lat, long })
+    }
 
   console.log(newplace);
   return (
