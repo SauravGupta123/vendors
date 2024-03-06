@@ -1,4 +1,4 @@
-[
+const shops = [
     {
         "CategoryName": "All in one Grocery"
     },
@@ -9,3 +9,5 @@
         "CategoryName": "Gupta Store"
     }
 ]
+
+module.exports = shops;
