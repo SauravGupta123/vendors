@@ -72,6 +72,7 @@ router.post('/createuser', createuserValidation(), async (req, res) => {
    //everything ok
    await User.create({ name, email, password: hashedPassword, location })
    res.json({ success: true });
+   
 
 
 })

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
 
 const Signup = () => {
   const [info, setInfo] = useState({ name: '', password: '', email: '', geolocation: '', confirmPassword:'' });
@@ -28,9 +28,11 @@ const Signup = () => {
           
         }),
       });
-  
+  console.log(response);
       if (response.ok) {
-        console.log('Success');
+        console.log('Successful');
+        // alert("SignUp successfully");
+        navigate('/login')
       } else {
         throw new Error(`Error: ${response.status}`);
       }
