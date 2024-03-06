@@ -1,12 +1,15 @@
 const shops = [
     {
-        "CategoryName": "All in one Grocery"
+        "CategoryName": "All in one Grocery",
+        "hex": "000000"
     },
     {
-        "CategoryName": "Amul"
+        "CategoryName": "Amul",
+        "hex": "000000"
     },
     {
-        "CategoryName": "Gupta Store"
+        "CategoryName": "Gupta Store",
+        "hex": "000000"
     }
 ]
 
