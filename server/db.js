@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
+const foodData = require("../dataset/foodData2.cjs");
+const shops = require("../dataset/foodCategory.cjs");
 const fetchData = async () => {
   try {
-    const foodItemsFetch = mongoose.connection.db.collection("foodData");
-    const foodItemsData = await foodItemsFetch.find({}).toArray();
+    // const foodItemsFetch = mongoose.connection.db.collection("foodData");
+    // const foodItemsData = await foodItemsFetch.find({}).toArray();
+    const foodItemsData = foodData;
 
     try {
-      const foodCatfetch = mongoose.connection.db.collection("foodCategory");
-      const foodCatData = await foodCatfetch.find({}).toArray();
+      // const foodCatfetch = mongoose.connection.db.collection("foodCategory");
+      // const foodCatData = await foodCatfetch.find({}).toArray();
+      const foodCatData = shops;
       global.foodItems = foodItemsData;
       global.foodCat = foodCatData;
     } catch (err) {
