@@ -13,6 +13,7 @@ import Signup from './screens/Signup/Signup.jsx';
 import { CartProvider } from './components/contextReducer.jsx';
 import Cart from './screens/Cart.jsx';
 import MyOrders from './screens/MyOrders.jsx';
+import Shops from "./screens/Shops/Shop.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,8 +43,11 @@ const router = createBrowserRouter([
   {
     path:'/myOrders',
     element:<MyOrders/>
+  },
+  {
+    path: '/shops',
+    element: <Shops/>
   }
-  
 
  
 ]);
