@@ -14,6 +14,7 @@ import { CartProvider } from './components/contextReducer.jsx';
 import Cart from './screens/Cart.jsx';
 import MyOrders from './screens/MyOrders.jsx';
 import Shops from "./screens/Shops/Shop.jsx";
+import ShopDetails from './screens/ShopDetails/ShopDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: '/shops',
     element: <Shops/>
+  },
+  {
+    path:'/shops/:id',
+    element:<ShopDetails/>
   }
 
  
