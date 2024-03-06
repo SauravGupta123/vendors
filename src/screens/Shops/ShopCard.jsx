@@ -8,12 +8,12 @@ function ShopCard({ name, photo, hex }) {
 
     return (
         <div className="m-2">
-            <div className="border rounded p-2 flex flex-row">
+            <div className="bg-zinc-700 rounded p-2 flex flex-row">
                 <img src={photo} className="w-28 p-2 rounded-xl" />
                 <div className="flex flex-column">
                     <h2 className="font-semibold text-xl">{name}</h2>
                     {/* <p></p> */}
-                    <Link to={`/shops/${removeWhiteSpace(name)}`} className="btn btn-primary w-28">View Shop</Link>
+                    <Link to={`/shops/${removeWhiteSpace(name)}`} className="btn btn-success w-28">View Shop</Link>
                 </div>
             </div>
         </div>
