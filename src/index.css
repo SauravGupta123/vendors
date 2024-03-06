@@ -1,0 +1,10 @@
+.Carausal{
+  
+    object-fit:contain;
+
+}
+.carousel-item{
+    width:100vw;
+    height:600px;
+}
+
