@@ -45,9 +45,11 @@ function Shops() {
 
     return (
         <>
-            <div className="mx-auto w-full">
+            <div className="w-full h-full">
+                <div className="w-[90%]">
 
-                <MapComponent />
+                    <MapComponent />
+                </div>
                 <div className="container my-4 mx-auto">
                     <h2 className="text-4xl font-bold text-center">Neaby Shops in your Polygon</h2>
                     {shops.map((data) => (

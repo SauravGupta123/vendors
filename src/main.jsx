@@ -15,6 +15,7 @@ import Cart from './screens/Cart.jsx';
 import MyOrders from './screens/MyOrders.jsx';
 import Shops from "./screens/Shops/Shop.jsx";
 import ShopDetails from './screens/ShopDetails/ShopDetails.jsx';
+import UserDashboard from './screens/User/UserDashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: '/shops/:id',
     element: <ShopDetails />
+  },
+  {
+    path : '/user/dashboard/' ,
+    element : <UserDashboard/>
   }
 
 
