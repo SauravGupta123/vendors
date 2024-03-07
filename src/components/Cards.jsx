@@ -1,26 +1,49 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react';
 import { useCart, useDispatchCart } from './contextReducer';
-import './cards.css'
+import './cards.css';
+import books from '../../public/assets/books.jpeg';
+import biscuit from '../../public/assets/biscuit.jpeg';
+import bucket from '../../public/assets/bucket.jpeg';
+import chips from '../../public/assets/chips.png';
+import chocolate from '../../public/assets/chocolate.jpeg';
+import coke from '../../public/assets/coke.jpeg';
+import cooker from '../../public/assets/cooker.png';
+import pen from '../../public/assets/pen.jpeg';
+import plates from '../../public/assets/plates.jpeg';
+import tape from '../../public/assets/tape.jpeg';
 
 function Cards({ foodItem, options }) {
-    
     const priceOptions = Object.keys(options);
     const data = useCart();
     const priceRef = useRef();
-    let dispatch = useDispatchCart();
-    const img = foodItem.img;
-    const Id = foodItem._id;
-    const name = foodItem.name;
-    const description = foodItem.description;
+    const dispatch = useDispatchCart();
     const [qty, setQty] = useState(1);
     const [size, setSize] = useState("");
 
-    const finalPrice = qty * parseInt(options[size])
+    const imgMap = {
+        'books': books,
+        'biscuit':biscuit,
+        'bucket': bucket,
+        'chips': chips,
+        'chocolate': chocolate,
+        'coke': coke,
+        'cooker': cooker,
+        'pen': pen,
+        'plates': plates,
+        'tape': tape,
+    };
+
+    const img = imgMap[foodItem.img] || '';
+
+    const Id = foodItem._id;
+    const name = foodItem.name;
+    const description = foodItem.description;
+
+    const finalPrice = qty * parseInt(options[size]);
 
     const handleAddToCart = async () => {
         let food = data.find((item) => item.id === foodItem._id);
-        console.log("data", data);
-    
+
         if (food) {
             if (food.size !== size) {
                 await dispatch({
@@ -50,14 +73,14 @@ function Cards({ foodItem, options }) {
             });
         }
     };
-    
-
 
     useEffect(() => {
         setSize(priceRef.current.value)
-    }, [])
+    }, []);
+
     return (
         <>
+            {console.log("data in card", data)}
             <div className="card mt-5 " style={{ width: "27rem" }}>
                 <img src={img} className="card-img-top" alt="..." style={{ height: "320px", objectFit: 'fill' }} />
                 <div className="card-body">
@@ -69,9 +92,7 @@ function Cards({ foodItem, options }) {
                                 return (
                                     <option key={i + 1} value={i + 1}>{i + 1}</option>
                                 )
-                            })
-
-                            }
+                            })}
                         </select>
                         <select name="" id="" ref={priceRef} className="m-2 h-100 w-30 bg-success rounded" onChange={(e) => { setSize(e.target.value) }}>
                             {priceOptions.map((data) => {
@@ -89,8 +110,7 @@ function Cards({ foodItem, options }) {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-
-export default Cards
+export default Cards;

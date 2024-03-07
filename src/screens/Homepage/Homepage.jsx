@@ -23,7 +23,7 @@ function Homepage() {
         });
 
         const data = await response.json();
-        // console.log(data);
+        console.log("whole data", data);
         setFoodData(data[0]);
         setFoodCat(data[1]);
   
@@ -41,9 +41,7 @@ function Homepage() {
   return (
     <div>
       <Navbar />
-      <div className='Carausal'>
-        <Carausal search={search} setSearch={setSearch}/>
-      </div>
+    
 
       <div className="cards">
         {loading ? (
