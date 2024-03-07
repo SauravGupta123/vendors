@@ -6,7 +6,6 @@ function Cards({ foodItem, options }) {
     
     const priceOptions = Object.keys(options);
     const data = useCart();
-    console.log(data);
     const priceRef = useRef();
     let dispatch = useDispatchCart();
     const img = foodItem.img;

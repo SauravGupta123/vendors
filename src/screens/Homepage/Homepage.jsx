@@ -63,8 +63,8 @@ function Homepage() {
                   .filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())))
                   .map((filterItems) => (
                     <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'>
-                     { console.log("filterItem", filterItems)
-                     
+                     { 
+
                      }
                       <Cards foodItem={filterItems} options={filterItems.options[0]}/>
                     </div>
