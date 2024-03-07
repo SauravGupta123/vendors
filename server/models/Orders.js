@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const { Schema } = mongoose;
 
-const OrderSchema = new Schema({
+const OrderSchema = new Schema({   //array of orders for parti
     email: {
         type: String,
         required: true,
